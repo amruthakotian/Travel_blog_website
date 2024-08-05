@@ -1,0 +1,184 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+.showcase{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url('./image/desktop-wallpaper-winter-snow-cars-car-field-van.jpg');
+    background-repeat: no repeat;
+    background-size:cover;
+    background-position:center;
+}
+.navbar{
+    width:85%;
+    margin: auto;
+    padding: 35px 0;
+    display:flex;
+    align-items:center;
+    justify-content: space-between;
+}
+.navbar .logo{
+    font-size: 70px;
+    font-weight:bold;
+    align-items:center;
+    text-align: center;
+    text-decoration:dashed;
+    color:rgb(239, 45, 152);
+    text-transform: uppercase;
+    cursor:pointer;
+}
+.navbar ul li{
+    font-size: 16px;
+    padding: 10px;
+    display: flex;
+    list-style: none;
+    display: inline-block;
+    margin-left:20px;
+    position: relative;
+}
+.navbar ul li a{
+    text-decoration: none;
+    font-weight:bold;
+    color:black;
+    text-transform:uppercase;
+}
+.navbar ul li::after{
+    content: '';
+    height: 3px;
+    width: 0;
+    background: #fff;
+    position: absolute;
+    left:0;
+    bottom: -2px;
+    transition: 0.5s;
+}
+.navbar ul li:hover::after{
+    width:100%;
+}
+.home-content{
+    text-align:center;
+    width:85%;
+    margin: auto;
+    padding: 35px 0;
+    display:inline-flexbox;
+    align-items:center;
+    justify-content: space-between;
+
+}
+.home-content h1{
+    font-size: 45px;
+    line-height: 160px;
+    color:bisque;    
+    text-shadow: #c0bdbd;
+    -webkit-text-stroke:1px rgb(228, 11, 73);
+
+}
+.home-content p{
+    text-align:center;
+    color:#c2e3f2;
+    font-size: 60;
+    font-style:normal;
+    font-weight:600;
+    position:8%;
+    bottom: 1%;
+    font-size: 30pxs;
+   
+}
+.conclusion{
+    text-align:center;
+    width:85%;
+    margin: auto;
+    padding: 35px 0;
+    display:inline-flexbox;
+    align-items:center;
+    justify-content: space-between;
+
+}
+.conclusion h1{
+    text-align:center;
+    color:black;
+    font-size: 20;
+    font-style:italic;
+    font-weight:250;
+    position:8%;
+    bottom: 1%;
+    font-size: 30pxs;
+   
+}
+body{
+    margin:0;
+    font-family: sans-serif;
+    font-weight:300;
+
+}
+.section{
+    
+    background-color: #242121;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    width:60%;
+    margin:10rem auto 0 auto;
+    
+
+}
+.section img{
+    height:250px;
+}
+.section h1{
+    margin:0;
+    color:rgb(243, 114, 136);
+    
+
+
+}
+.section p{
+    color:#fff;
+    margin-right:15px;
+    
+}
+@media (max-width:992px){
+
+    .navbar .logo{
+        font-size:14px;
+    }
+    .navbar{
+        width:90%;
+        margin:auto;
+        padding: 20px 0;
+    }
+    .navbar ul li{
+        font-size: 14px;
+        margin-left: -5px;
+    }
+    .section{
+        width:90%;
+        margin:auto;
+        padding: 20px 0;
+
+    }
+}
+@media (max-width:576px){
+    .navbar .logo{
+        font-size:10px;
+    }
+    .navbar{
+        width:98%;
+        margin:auto;
+        padding: 12px 0;
+    }
+    .navbar ul li{
+        font-size: 10px;
+        margin-left: -5px;
+    }
+    .section{
+        width:90%;
+        margin:auto;
+        padding: 20px 0;
+
+    }
+}

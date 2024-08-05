@@ -1,0 +1,358 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+::-webkit-scrollbar {
+  width: 10px;
+  background-color: #4d608a;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #c66f0b;
+  border-radius: 2px;
+}
+.showcase{
+    width: 100%;
+    height: 100vh;
+    background-image:url(./image/placesHeader.png);
+    background-position:center;
+    background-size:cover;
+}
+.navbar{
+  width:85%;
+  margin: auto;
+  padding: 35px 0;
+  display:flex;
+  align-items:center;
+  justify-content: space-between;
+}
+.navbar .logo{
+  font-size: 70px;
+  font-weight:bolder;
+  align-items:center;
+  text-align: center;
+  text-decoration:dashed;
+  color:black;
+  text-transform: uppercase;
+  cursor:pointer;
+}
+.navbar ul li{
+  font-size: 16px;
+  padding: 10px;
+  display: flex;
+  list-style: none;
+  display: inline-block;
+  margin-left:20px;
+  position: relative;
+}
+.navbar ul li a{
+  text-decoration: none;
+  font-weight:bold;
+  color:black;
+  text-transform:uppercase;
+}
+.navbar ul li::after{
+  content: '';
+  height: 3px;
+  width: 0;
+  background: #fff;
+  position: absolute;
+  left:0;
+  bottom: -2px;
+  transition: 0.5s;
+}
+.navbar ul li:hover::after{
+  width:100%;
+}
+
+
+.header {
+    height: 80vh;
+    background: url("../Images/placesHeader.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  .header-content {
+    width: 65%;
+    text-align: center;
+  }
+  
+  .header-content h1 {
+    color: #142361;
+    font-size: 2.5rem;
+  }
+  
+  .textHighlight {
+    color: #e48111;
+  }
+  
+  .header-content p {
+    width: 60%;
+    color: #3355a0;
+    margin: 0 auto;
+  }
+  
+  .scrollButton {
+    background: rgb(20, 36, 94);
+    background: linear-gradient(
+      90deg,
+      rgba(20, 36, 94, 1) 0%,
+      rgba(5, 14, 47, 1) 50%,
+      rgba(24, 60, 125, 1) 50%,
+      rgba(9, 23, 50, 1) 100%
+    );
+    background-size: 200%;
+    background-position: left;
+    transition: 0.5s ease-in-out;
+    padding: 0.5rem 1rem;
+    color: white;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    border: none;
+    display: flex;
+    cursor: pointer;
+  }
+  
+  .scrollButton:hover {
+    background-position: right;
+    transform: scale(1.05);
+  }
+  
+  .scrollContainer {
+    position: absolute;
+    justify-self: center;
+    bottom: 100px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+  }
+  
+  .scrollButton img {
+    color: #e48111;
+    margin-right: 10px;
+    width: 25px;
+  }
+  
+  
+  .places-content {
+    width: 80%;
+    background: #ffffff;
+    margin: 80px auto;
+    margin-bottom: 0;
+    padding-bottom: 200px;
+    position: relative;
+  }
+  
+  .destinations {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 350px);
+    grid-column-gap: 20px;
+    grid-row-gap: 50px;
+    align-items: flex-start;
+    justify-content: flex-start;
+  
+    transition: all 0.5s ease;
+  }
+  
+  .places {
+    width: 100%;
+    position: relative;
+  }
+  
+  .destination {
+    width: 350px;
+    height: 200px;
+    border-radius: 10px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .state {
+    border-top: #14236121 solid 2px;
+    margin-top: 50px;
+  }
+  
+  .state:first-child {
+    border-top: none;
+  }
+  
+  .destination:hover .overlay {
+    opacity: 1;
+  }
+  
+  .title {
+    font-size: 3rem;
+    text-align:center;
+    margin-bottom: 30px;
+    margin-top: 30px;
+  }
+  
+  
+  .overlay {
+    background: #07103bc7;
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    width: 350px;
+    height: 200px;
+    border-radius: 10px;
+    position: relative;
+    transition: all 0.5s ease;
+  }
+  .model {
+    position: fixed;
+    display: block;
+    width: 100%;
+    height: 0vh;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    transition: 0.5s ease;
+    background: #1a203f86;
+  }
+  
+  .model.active {
+    height: 100vh;
+  }
+  .modelContent {
+    bottom: -1000px;
+    left: -1000px;
+    display: none;
+    animation: modal 0.5s ease reverse;
+  }
+  
+  @keyframes modal {
+    0% {
+    }
+  
+    100% {
+      transform: translateY(1000px);
+    }
+  }
+  
+  .modelContent.active {
+    background: #ffffff;
+    position: fixed;
+  
+    width: 80%;
+    height: 80vh;
+    display: block;
+    top: 10vh;
+    left: 10%;
+    border-radius: 10px;
+    z-index: 9999;
+    overflow: scroll;
+    overflow-x: hidden;
+    transition: all 0.5s ease-in-out;
+  }
+  
+  .overlay {
+    background: #07103bc7;
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    width: 350px;
+    height: 200px;
+    border-radius: 10px;
+    position: relative;
+    transition: all 0.5s ease;
+  }
+  .moreInfo {
+    position: absolute;
+    bottom: 30px;
+    background: linear-gradient(
+      90deg,
+      rgb(211, 95, 18) 0%,
+      rgb(221, 143, 26) 100%
+    );
+    padding: 0.5rem 1rem;
+    color: #142361;
+    font-weight: 600;
+    font-size: 1rem;
+    border-radius: 10px;
+    cursor: pointer;
+    border: none;
+  }
+  .contentHeader {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    padding: 50px;
+  }
+  
+  
+  .details {
+    width: 57%;
+  }
+  
+  .placeTitle {
+    font-size: 4rem;
+    color: #142361;
+    margin-bottom: 20px;
+  }
+  
+  .placeDescription {
+    width: 80%;
+    color: #4d608a;
+    font-size: 1.2rem;
+  }
+  
+  
+  .closeButton {
+    position: absolute;
+    right: 30px;
+    top: 20px;
+    cursor: pointer;
+    background: #142361;
+    padding: 0;
+    border-radius: 8px;
+    transition: 0.5s ease;
+    width: 40px;
+  }
+  
+  .closeButton:hover {
+    transform: rotate(90deg);
+  }
+  
+  .facts {
+    padding: 0 50px 50px 50px;
+    width: 90%;
+  }
+  
+  .factTitle {
+    font-size: 1.8rem;
+    color: #142361;
+    margin-bottom: 20px;
+  }
+  
+  .factHighlight {
+    color: #e48111;
+  }
+  
+  .factContainer {
+    color: #4d608a;
+  }
+  
+  .factContainer li {
+    margin-bottom: 10px;
+    margin-left: 20px;
+  }
+  
+  
